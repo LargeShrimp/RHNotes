@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7063904478D2E733FFA3014C /* libPods-RHNotes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA311D9C3A33A852C9059346 /* libPods-RHNotes.a */; };
+		842F4C141D7D7B880061A55F /* 20160905180748836_CreateNotesIndex.sql in Resources */ = {isa = PBXBuildFile; fileRef = 842F4C131D7D7B880061A55F /* 20160905180748836_CreateNotesIndex.sql */; };
+		842F4C171D7DA3BF0061A55F /* NoteIndexEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 842F4C161D7DA3BF0061A55F /* NoteIndexEntity.m */; };
+		842F4C1A1D7DA55E0061A55F /* NotesIndexDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 842F4C191D7DA55E0061A55F /* NotesIndexDBManager.m */; };
+		842F4C1D1D7DB3A20061A55F /* RHNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842F4C1C1D7DB3A20061A55F /* RHNoteViewController.m */; };
+		842F4C201D7DB4540061A55F /* RHNoteTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842F4C1F1D7DB4540061A55F /* RHNoteTableView.m */; };
+		842F4C231D7DB6A70061A55F /* JumpPagesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 842F4C221D7DB6A70061A55F /* JumpPagesHandler.m */; };
+		842F4C261D7DBB6D0061A55F /* RHNewNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842F4C251D7DBB6D0061A55F /* RHNewNoteViewController.m */; };
 		8488DB371D7BAABD0073B95E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB361D7BAABD0073B95E /* main.m */; };
 		8488DB3A1D7BAABE0073B95E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB391D7BAABE0073B95E /* AppDelegate.m */; };
-		8488DB3D1D7BAABE0073B95E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB3C1D7BAABE0073B95E /* ViewController.m */; };
-		8488DB401D7BAABE0073B95E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8488DB3E1D7BAABE0073B95E /* Main.storyboard */; };
 		8488DB421D7BAABE0073B95E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488DB411D7BAABE0073B95E /* Assets.xcassets */; };
 		8488DB451D7BAABE0073B95E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8488DB431D7BAABE0073B95E /* LaunchScreen.storyboard */; };
 		8488DB501D7BAABE0073B95E /* RHNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB4F1D7BAABE0073B95E /* RHNotesTests.m */; };
 		8488DB5B1D7BAABE0073B95E /* RHNotesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB5A1D7BAABE0073B95E /* RHNotesUITests.m */; };
+		8488DB721D7BABC40073B95E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB711D7BABC40073B95E /* BaseViewController.m */; };
+		8488DB751D7BABD50073B95E /* RHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB741D7BABD50073B95E /* RHMainViewController.m */; };
+		8488DB7B1D7BAE390073B95E /* RHMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB7A1D7BAE390073B95E /* RHMainTableView.m */; };
+		8488DB811D7BB1410073B95E /* BaseDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB7E1D7BB1410073B95E /* BaseDBManager.m */; };
+		8488DB821D7BB1410073B95E /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB801D7BB1410073B95E /* BaseEntity.m */; };
+		8488DB8A1D7BB1CD0073B95E /* NotesDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB891D7BB1CD0073B95E /* NotesDBManager.m */; };
+		8488DB8D1D7BB1E80073B95E /* NoteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB8C1D7BB1E80073B95E /* NoteEntity.m */; };
+		A4F0DE79CA7BC7C5862B32CC /* libPods-RHNotesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E85E08DA734A845DD4D69A /* libPods-RHNotesTests.a */; };
+		B6F8A9130A354447A60246FF /* libPods-RHNotesUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAF81E873EA4D0BF06A59C5 /* libPods-RHNotesUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +50,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		094CD5B2016D2688D70AB1EF /* Pods-RHNotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RHNotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RHNotesTests/Pods-RHNotesTests.release.xcconfig"; sourceTree = "<group>"; };
+		247801592256020F62F9E56F /* Pods-RHNotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RHNotesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RHNotesUITests/Pods-RHNotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		51E85E08DA734A845DD4D69A /* libPods-RHNotesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RHNotesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B882A724FEEC49D8DA752A0 /* Pods-RHNotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RHNotesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RHNotesTests/Pods-RHNotesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		842F4C121D7C04CA0061A55F /* RHNotes-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RHNotes-Prefix.pch"; sourceTree = "<group>"; };
+		842F4C131D7D7B880061A55F /* 20160905180748836_CreateNotesIndex.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 20160905180748836_CreateNotesIndex.sql; sourceTree = "<group>"; };
+		842F4C151D7DA3BF0061A55F /* NoteIndexEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteIndexEntity.h; sourceTree = "<group>"; };
+		842F4C161D7DA3BF0061A55F /* NoteIndexEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteIndexEntity.m; sourceTree = "<group>"; };
+		842F4C181D7DA55E0061A55F /* NotesIndexDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesIndexDBManager.h; sourceTree = "<group>"; };
+		842F4C191D7DA55E0061A55F /* NotesIndexDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesIndexDBManager.m; sourceTree = "<group>"; };
+		842F4C1B1D7DB3A20061A55F /* RHNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHNoteViewController.h; sourceTree = "<group>"; };
+		842F4C1C1D7DB3A20061A55F /* RHNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHNoteViewController.m; sourceTree = "<group>"; };
+		842F4C1E1D7DB4540061A55F /* RHNoteTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHNoteTableView.h; sourceTree = "<group>"; };
+		842F4C1F1D7DB4540061A55F /* RHNoteTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHNoteTableView.m; sourceTree = "<group>"; };
+		842F4C211D7DB6A70061A55F /* JumpPagesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpPagesHandler.h; sourceTree = "<group>"; };
+		842F4C221D7DB6A70061A55F /* JumpPagesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpPagesHandler.m; sourceTree = "<group>"; };
+		842F4C241D7DBB6D0061A55F /* RHNewNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHNewNoteViewController.h; sourceTree = "<group>"; };
+		842F4C251D7DBB6D0061A55F /* RHNewNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHNewNoteViewController.m; sourceTree = "<group>"; };
 		8488DB321D7BAABD0073B95E /* RHNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RHNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8488DB361D7BAABD0073B95E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8488DB381D7BAABE0073B95E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8488DB391D7BAABE0073B95E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8488DB3B1D7BAABE0073B95E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8488DB3C1D7BAABE0073B95E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8488DB3F1D7BAABE0073B95E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8488DB411D7BAABE0073B95E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8488DB441D7BAABE0073B95E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8488DB461D7BAABE0073B95E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +81,25 @@
 		8488DB561D7BAABE0073B95E /* RHNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RHNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8488DB5A1D7BAABE0073B95E /* RHNotesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHNotesUITests.m; sourceTree = "<group>"; };
 		8488DB5C1D7BAABE0073B95E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8488DB701D7BABC40073B95E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8488DB711D7BABC40073B95E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8488DB731D7BABD50073B95E /* RHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMainViewController.h; sourceTree = "<group>"; };
+		8488DB741D7BABD50073B95E /* RHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMainViewController.m; sourceTree = "<group>"; };
+		8488DB791D7BAE390073B95E /* RHMainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMainTableView.h; sourceTree = "<group>"; };
+		8488DB7A1D7BAE390073B95E /* RHMainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMainTableView.m; sourceTree = "<group>"; };
+		8488DB7D1D7BB1410073B95E /* BaseDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDBManager.h; sourceTree = "<group>"; };
+		8488DB7E1D7BB1410073B95E /* BaseDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDBManager.m; sourceTree = "<group>"; };
+		8488DB7F1D7BB1410073B95E /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		8488DB801D7BB1410073B95E /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		8488DB881D7BB1CD0073B95E /* NotesDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesDBManager.h; sourceTree = "<group>"; };
+		8488DB891D7BB1CD0073B95E /* NotesDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesDBManager.m; sourceTree = "<group>"; };
+		8488DB8B1D7BB1E80073B95E /* NoteEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteEntity.h; sourceTree = "<group>"; };
+		8488DB8C1D7BB1E80073B95E /* NoteEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteEntity.m; sourceTree = "<group>"; };
+		973B8BE912389E69C2E58AA4 /* Pods-RHNotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RHNotesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RHNotesUITests/Pods-RHNotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABAF81E873EA4D0BF06A59C5 /* libPods-RHNotesUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RHNotesUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43B2186D7314A7CE774C9E7 /* Pods-RHNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RHNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-RHNotes/Pods-RHNotes.release.xcconfig"; sourceTree = "<group>"; };
+		C1BDAEDA2CF4E83496675195 /* Pods-RHNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RHNotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RHNotes/Pods-RHNotes.debug.xcconfig"; sourceTree = "<group>"; };
+		CA311D9C3A33A852C9059346 /* libPods-RHNotes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RHNotes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7063904478D2E733FFA3014C /* libPods-RHNotes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F0DE79CA7BC7C5862B32CC /* libPods-RHNotesTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,19 +123,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F8A9130A354447A60246FF /* libPods-RHNotesUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		367B22D2E1B9E6EC81F1AF20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA311D9C3A33A852C9059346 /* libPods-RHNotes.a */,
+				51E85E08DA734A845DD4D69A /* libPods-RHNotesTests.a */,
+				ABAF81E873EA4D0BF06A59C5 /* libPods-RHNotesUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8488DB291D7BAABD0073B95E = {
 			isa = PBXGroup;
 			children = (
+				367B22D2E1B9E6EC81F1AF20 /* Frameworks */,
+				EB1EC76C10EB6C81F1CE1271 /* Pods */,
+				8488DB331D7BAABD0073B95E /* Products */,
 				8488DB341D7BAABD0073B95E /* RHNotes */,
 				8488DB4E1D7BAABE0073B95E /* RHNotesTests */,
 				8488DB591D7BAABE0073B95E /* RHNotesUITests */,
-				8488DB331D7BAABD0073B95E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +165,18 @@
 		8488DB341D7BAABD0073B95E /* RHNotes */ = {
 			isa = PBXGroup;
 			children = (
+				8488DB6F1D7BABA50073B95E /* BaseClasses */,
+				8488DB681D7BAAD80073B95E /* Controllers */,
+				8488DB861D7BB18D0073B95E /* Handlers */,
+				8488DB831D7BB1540073B95E /* Resources */,
+				8488DB351D7BAABD0073B95E /* Supporting Files */,
+				8488DB761D7BAC670073B95E /* Utils */,
+				8488DB7C1D7BAE430073B95E /* Views */,
 				8488DB381D7BAABE0073B95E /* AppDelegate.h */,
 				8488DB391D7BAABE0073B95E /* AppDelegate.m */,
-				8488DB3B1D7BAABE0073B95E /* ViewController.h */,
-				8488DB3C1D7BAABE0073B95E /* ViewController.m */,
-				8488DB3E1D7BAABE0073B95E /* Main.storyboard */,
 				8488DB411D7BAABE0073B95E /* Assets.xcassets */,
-				8488DB431D7BAABE0073B95E /* LaunchScreen.storyboard */,
 				8488DB461D7BAABE0073B95E /* Info.plist */,
-				8488DB351D7BAABD0073B95E /* Supporting Files */,
+				8488DB431D7BAABE0073B95E /* LaunchScreen.storyboard */,
 			);
 			path = RHNotes;
 			sourceTree = "<group>";
@@ -117,16 +184,17 @@
 		8488DB351D7BAABD0073B95E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				842F4C121D7C04CA0061A55F /* RHNotes-Prefix.pch */,
 				8488DB361D7BAABD0073B95E /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8488DB4E1D7BAABE0073B95E /* RHNotesTests */ = {
 			isa = PBXGroup;
 			children = (
-				8488DB4F1D7BAABE0073B95E /* RHNotesTests.m */,
 				8488DB511D7BAABE0073B95E /* Info.plist */,
+				8488DB4F1D7BAABE0073B95E /* RHNotesTests.m */,
 			);
 			path = RHNotesTests;
 			sourceTree = "<group>";
@@ -134,10 +202,116 @@
 		8488DB591D7BAABE0073B95E /* RHNotesUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8488DB5A1D7BAABE0073B95E /* RHNotesUITests.m */,
 				8488DB5C1D7BAABE0073B95E /* Info.plist */,
+				8488DB5A1D7BAABE0073B95E /* RHNotesUITests.m */,
 			);
 			path = RHNotesUITests;
+			sourceTree = "<group>";
+		};
+		8488DB681D7BAAD80073B95E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8488DB731D7BABD50073B95E /* RHMainViewController.h */,
+				8488DB741D7BABD50073B95E /* RHMainViewController.m */,
+				842F4C241D7DBB6D0061A55F /* RHNewNoteViewController.h */,
+				842F4C251D7DBB6D0061A55F /* RHNewNoteViewController.m */,
+				842F4C1B1D7DB3A20061A55F /* RHNoteViewController.h */,
+				842F4C1C1D7DB3A20061A55F /* RHNoteViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8488DB6F1D7BABA50073B95E /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				8488DB7D1D7BB1410073B95E /* BaseDBManager.h */,
+				8488DB7E1D7BB1410073B95E /* BaseDBManager.m */,
+				8488DB7F1D7BB1410073B95E /* BaseEntity.h */,
+				8488DB801D7BB1410073B95E /* BaseEntity.m */,
+				8488DB701D7BABC40073B95E /* BaseViewController.h */,
+				8488DB711D7BABC40073B95E /* BaseViewController.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		8488DB761D7BAC670073B95E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8488DB781D7BAC9C0073B95E /* Categories */,
+				8488DB871D7BB1B10073B95E /* DBManager */,
+				8488DB771D7BAC900073B95E /* Entities */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8488DB771D7BAC900073B95E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8488DB8B1D7BB1E80073B95E /* NoteEntity.h */,
+				8488DB8C1D7BB1E80073B95E /* NoteEntity.m */,
+				842F4C151D7DA3BF0061A55F /* NoteIndexEntity.h */,
+				842F4C161D7DA3BF0061A55F /* NoteIndexEntity.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8488DB781D7BAC9C0073B95E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		8488DB7C1D7BAE430073B95E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8488DB791D7BAE390073B95E /* RHMainTableView.h */,
+				8488DB7A1D7BAE390073B95E /* RHMainTableView.m */,
+				842F4C1E1D7DB4540061A55F /* RHNoteTableView.h */,
+				842F4C1F1D7DB4540061A55F /* RHNoteTableView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8488DB831D7BB1540073B95E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				842F4C131D7D7B880061A55F /* 20160905180748836_CreateNotesIndex.sql */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8488DB861D7BB18D0073B95E /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				842F4C211D7DB6A70061A55F /* JumpPagesHandler.h */,
+				842F4C221D7DB6A70061A55F /* JumpPagesHandler.m */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		8488DB871D7BB1B10073B95E /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				8488DB881D7BB1CD0073B95E /* NotesDBManager.h */,
+				8488DB891D7BB1CD0073B95E /* NotesDBManager.m */,
+				842F4C181D7DA55E0061A55F /* NotesIndexDBManager.h */,
+				842F4C191D7DA55E0061A55F /* NotesIndexDBManager.m */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		EB1EC76C10EB6C81F1CE1271 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1BDAEDA2CF4E83496675195 /* Pods-RHNotes.debug.xcconfig */,
+				B43B2186D7314A7CE774C9E7 /* Pods-RHNotes.release.xcconfig */,
+				6B882A724FEEC49D8DA752A0 /* Pods-RHNotesTests.debug.xcconfig */,
+				094CD5B2016D2688D70AB1EF /* Pods-RHNotesTests.release.xcconfig */,
+				973B8BE912389E69C2E58AA4 /* Pods-RHNotesUITests.debug.xcconfig */,
+				247801592256020F62F9E56F /* Pods-RHNotesUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +321,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8488DB5F1D7BAABE0073B95E /* Build configuration list for PBXNativeTarget "RHNotes" */;
 			buildPhases = (
+				9EA477B5C1299A3A5A3DD918 /* [CP] Check Pods Manifest.lock */,
 				8488DB2E1D7BAABD0073B95E /* Sources */,
 				8488DB2F1D7BAABD0073B95E /* Frameworks */,
 				8488DB301D7BAABD0073B95E /* Resources */,
+				93A757E979BF260F8A227FF0 /* [CP] Embed Pods Frameworks */,
+				C00F5AA49183512079E2F513 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +341,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8488DB621D7BAABE0073B95E /* Build configuration list for PBXNativeTarget "RHNotesTests" */;
 			buildPhases = (
+				D1CF51E5131A5250FA2EE368 /* [CP] Check Pods Manifest.lock */,
 				8488DB471D7BAABE0073B95E /* Sources */,
 				8488DB481D7BAABE0073B95E /* Frameworks */,
 				8488DB491D7BAABE0073B95E /* Resources */,
+				09D52DFBAAD7C43DAC725867 /* [CP] Embed Pods Frameworks */,
+				70B255A4C2D9F330B72F14CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +362,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8488DB651D7BAABE0073B95E /* Build configuration list for PBXNativeTarget "RHNotesUITests" */;
 			buildPhases = (
+				A7AE205F023F5B3DDB627E46 /* [CP] Check Pods Manifest.lock */,
 				8488DB521D7BAABE0073B95E /* Sources */,
 				8488DB531D7BAABE0073B95E /* Frameworks */,
 				8488DB541D7BAABE0073B95E /* Resources */,
+				A1AEAB442ED52F756A52CD51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +384,7 @@
 		8488DB2A1D7BAABD0073B95E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RH;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = taitanxiami;
 				TargetAttributes = {
@@ -243,9 +426,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842F4C141D7D7B880061A55F /* 20160905180748836_CreateNotesIndex.sql in Resources */,
 				8488DB451D7BAABE0073B95E /* LaunchScreen.storyboard in Resources */,
 				8488DB421D7BAABE0073B95E /* Assets.xcassets in Resources */,
-				8488DB401D7BAABE0073B95E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +448,149 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09D52DFBAAD7C43DAC725867 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RHNotesTests/Pods-RHNotesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70B255A4C2D9F330B72F14CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RHNotesTests/Pods-RHNotesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93A757E979BF260F8A227FF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RHNotes/Pods-RHNotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EA477B5C1299A3A5A3DD918 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1AEAB442ED52F756A52CD51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RHNotesUITests/Pods-RHNotesUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7AE205F023F5B3DDB627E46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C00F5AA49183512079E2F513 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RHNotes/Pods-RHNotes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1CF51E5131A5250FA2EE368 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8488DB2E1D7BAABD0073B95E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8488DB3D1D7BAABE0073B95E /* ViewController.m in Sources */,
+				8488DB821D7BB1410073B95E /* BaseEntity.m in Sources */,
+				842F4C201D7DB4540061A55F /* RHNoteTableView.m in Sources */,
 				8488DB3A1D7BAABE0073B95E /* AppDelegate.m in Sources */,
+				8488DB7B1D7BAE390073B95E /* RHMainTableView.m in Sources */,
+				8488DB721D7BABC40073B95E /* BaseViewController.m in Sources */,
 				8488DB371D7BAABD0073B95E /* main.m in Sources */,
+				842F4C171D7DA3BF0061A55F /* NoteIndexEntity.m in Sources */,
+				8488DB8A1D7BB1CD0073B95E /* NotesDBManager.m in Sources */,
+				842F4C1A1D7DA55E0061A55F /* NotesIndexDBManager.m in Sources */,
+				842F4C231D7DB6A70061A55F /* JumpPagesHandler.m in Sources */,
+				842F4C1D1D7DB3A20061A55F /* RHNoteViewController.m in Sources */,
+				8488DB8D1D7BB1E80073B95E /* NoteEntity.m in Sources */,
+				8488DB811D7BB1410073B95E /* BaseDBManager.m in Sources */,
+				8488DB751D7BABD50073B95E /* RHMainViewController.m in Sources */,
+				842F4C261D7DBB6D0061A55F /* RHNewNoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,20 +626,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8488DB3E1D7BAABE0073B95E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8488DB3F1D7BAABE0073B95E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8488DB431D7BAABE0073B95E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8488DB441D7BAABE0073B95E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -413,28 +724,37 @@
 		};
 		8488DB601D7BAABE0073B95E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1BDAEDA2CF4E83496675195 /* Pods-RHNotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/RHNotes-Prefix.pch";
 				INFOPLIST_FILE = RHNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taitanxiami.RHNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8488DB611D7BAABE0073B95E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43B2186D7314A7CE774C9E7 /* Pods-RHNotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/RHNotes-Prefix.pch";
 				INFOPLIST_FILE = RHNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taitanxiami.RHNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		8488DB631D7BAABE0073B95E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B882A724FEEC49D8DA752A0 /* Pods-RHNotesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RHNotesTests/Info.plist;
@@ -447,6 +767,7 @@
 		};
 		8488DB641D7BAABE0073B95E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 094CD5B2016D2688D70AB1EF /* Pods-RHNotesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RHNotesTests/Info.plist;
@@ -459,6 +780,7 @@
 		};
 		8488DB661D7BAABE0073B95E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973B8BE912389E69C2E58AA4 /* Pods-RHNotesUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RHNotesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -470,6 +792,7 @@
 		};
 		8488DB671D7BAABE0073B95E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 247801592256020F62F9E56F /* Pods-RHNotesUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RHNotesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -498,6 +821,7 @@
 				8488DB611D7BAABE0073B95E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8488DB621D7BAABE0073B95E /* Build configuration list for PBXNativeTarget "RHNotesTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +830,7 @@
 				8488DB641D7BAABE0073B95E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8488DB651D7BAABE0073B95E /* Build configuration list for PBXNativeTarget "RHNotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +839,7 @@
 				8488DB671D7BAABE0073B95E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
