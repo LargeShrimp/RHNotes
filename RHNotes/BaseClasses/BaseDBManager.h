@@ -46,10 +46,12 @@
 //通过key 和 条件 查询
 + (NSArray *)findByColumn:(NSString *)column columnValue:(NSString *)value withClass:(Class)objectClass;
 
+/*
 + (NSArray *)findRandomByDictionary:(NSDictionary *)columnDictionary withClass:(Class)objectClass;
+ */
 //多值更新
 
 + (id)updateDate:(NSDictionary *)columnDictionary withClass:(Class)objectClass;
-+ (NSNumber *)getMaxColumnIdWithClass:(Class)objectClass column:(NSString *)column;
+//+ (NSNumber *)getMaxColumnIdWithClass:(Class)objectClass column:(NSString *)column;
 
 @end

@@ -194,7 +194,7 @@
     FMResultSet *resultSet = [[BaseDBManager shareInstance].db executeQuery:query];
     NSMutableArray *result = [NSMutableArray array];
     //把 resultSet 转换成model
-    if ([resultSet next]) {
+    while  ([resultSet next]) {
         [result addObject:[MTLFMDBAdapter modelOfClass:objectClass fromFMResultSet:resultSet error:&error]];
     }
     return result;

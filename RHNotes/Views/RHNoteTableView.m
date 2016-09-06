@@ -58,8 +58,8 @@ static NSString *const NOTECELLINTITY = @"NOTECELLINTITY";
 }
 
 
-- (void)setNotesIndex:(NSArray *)notes {
-    _notes = notes;
+- (void)setNotes:(NSArray *)notes {
+    _notes = [notes copy];
     [self reloadData];
 }
 

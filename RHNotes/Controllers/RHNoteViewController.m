@@ -20,7 +20,12 @@
 @end
 
 @implementation RHNoteViewController
-
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+     [self fetchNotesData];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -40,7 +45,7 @@
     }];
     
     
-    [self fetchNotesData];
+  
 }
 - (void)configRithItem {
     
@@ -57,7 +62,9 @@
 
 - (void)fetchNotesData {
     
-    self.notes = [[NotesDBManager queryAllDataWithClass:[NoteEntity class]] mutableCopy];
+//    self.notes = [[NotesDBManager queryAllDataWithClass:[NoteEntity class]] mutableCopy];
+    
+  self.notes =   [[NotesDBManager findByColumn:@"index_id" columnValue:[NSString stringWithFormat:@"%@",self.noteIndexEntity.noteIdxId] withClass:[NoteEntity class]] mutableCopy];
     [self.tableView setNotes:[self.notes copy]];
 }
 - (void)didReceiveMemoryWarning {

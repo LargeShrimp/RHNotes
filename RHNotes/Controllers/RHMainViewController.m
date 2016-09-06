@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) RHMainTableView *tableView;
 @property (strong, nonatomic)  UIAlertAction *okAction;
-
+@property (strong, nonatomic) NSString *folder;
 @property (strong, nonatomic) NSMutableArray *notesIndexArray;
 
 @end
@@ -38,9 +38,14 @@
         make.edges.equalTo(self.view);
     }];
     
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     
+    [super viewWillAppear:animated];
     [self fetchNotesIndexData];
-    
+
 }
 
 
@@ -78,6 +83,8 @@
 - (void)handleTextFieldTextDidChangeNotification:(NSNotification *)notification {
     
     UITextField *textField = notification.object;
+    
+    self.folder = textField.text;
     if (textField.text.length > 0) {
         _okAction.enabled = YES;
     }else {
@@ -87,7 +94,13 @@
 }
 
 - (void)saveNewfolder {
+    NoteIndexEntity *noteIndexEntity = [[NoteIndexEntity alloc]init];
+    noteIndexEntity.name = self.folder;
+    [NotesIndexDBManager insertOnDuplicateUpdate:noteIndexEntity];
+    
+    [self fetchNotesIndexData];
     _okAction = nil;
+    _folder = nil;
 }
 
 - (void)fetchNotesIndexData {
