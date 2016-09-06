@@ -28,6 +28,7 @@
 		8488DB821D7BB1410073B95E /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB801D7BB1410073B95E /* BaseEntity.m */; };
 		8488DB8A1D7BB1CD0073B95E /* NotesDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB891D7BB1CD0073B95E /* NotesDBManager.m */; };
 		8488DB8D1D7BB1E80073B95E /* NoteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8488DB8C1D7BB1E80073B95E /* NoteEntity.m */; };
+		84D9BCC81D7EF5B00038AE82 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D9BCC71D7EF5B00038AE82 /* CloudKit.framework */; };
 		A4F0DE79CA7BC7C5862B32CC /* libPods-RHNotesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E85E08DA734A845DD4D69A /* libPods-RHNotesTests.a */; };
 		B6F8A9130A354447A60246FF /* libPods-RHNotesUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAF81E873EA4D0BF06A59C5 /* libPods-RHNotesUITests.a */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,8 @@
 		8488DB891D7BB1CD0073B95E /* NotesDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesDBManager.m; sourceTree = "<group>"; };
 		8488DB8B1D7BB1E80073B95E /* NoteEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteEntity.h; sourceTree = "<group>"; };
 		8488DB8C1D7BB1E80073B95E /* NoteEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteEntity.m; sourceTree = "<group>"; };
+		84D9BCC61D7EF5A60038AE82 /* RHNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RHNotes.entitlements; sourceTree = "<group>"; };
+		84D9BCC71D7EF5B00038AE82 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		973B8BE912389E69C2E58AA4 /* Pods-RHNotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RHNotesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RHNotesUITests/Pods-RHNotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABAF81E873EA4D0BF06A59C5 /* libPods-RHNotesUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RHNotesUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43B2186D7314A7CE774C9E7 /* Pods-RHNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RHNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-RHNotes/Pods-RHNotes.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7063904478D2E733FFA3014C /* libPods-RHNotes.a in Frameworks */,
+				84D9BCC81D7EF5B00038AE82 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +137,7 @@
 		367B22D2E1B9E6EC81F1AF20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84D9BCC71D7EF5B00038AE82 /* CloudKit.framework */,
 				CA311D9C3A33A852C9059346 /* libPods-RHNotes.a */,
 				51E85E08DA734A845DD4D69A /* libPods-RHNotesTests.a */,
 				ABAF81E873EA4D0BF06A59C5 /* libPods-RHNotesUITests.a */,
@@ -165,6 +170,7 @@
 		8488DB341D7BAABD0073B95E /* RHNotes */ = {
 			isa = PBXGroup;
 			children = (
+				84D9BCC61D7EF5A60038AE82 /* RHNotes.entitlements */,
 				8488DB6F1D7BABA50073B95E /* BaseClasses */,
 				8488DB681D7BAAD80073B95E /* Controllers */,
 				8488DB861D7BB18D0073B95E /* Handlers */,
@@ -390,6 +396,12 @@
 				TargetAttributes = {
 					8488DB311D7BAABD0073B95E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = QPDNC8PW8J;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					8488DB4A1D7BAABE0073B95E = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -727,6 +739,7 @@
 			baseConfigurationReference = C1BDAEDA2CF4E83496675195 /* Pods-RHNotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RHNotes/RHNotes.entitlements;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Supporting Files/RHNotes-Prefix.pch";
 				INFOPLIST_FILE = RHNotes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -742,6 +755,7 @@
 			baseConfigurationReference = B43B2186D7314A7CE774C9E7 /* Pods-RHNotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RHNotes/RHNotes.entitlements;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Supporting Files/RHNotes-Prefix.pch";
 				INFOPLIST_FILE = RHNotes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
