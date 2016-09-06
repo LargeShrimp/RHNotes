@@ -8,7 +8,13 @@
 
 #import "BaseViewController.h"
 @class NoteIndexEntity;
-
+@class NoteEntity;
+typedef NS_ENUM(NSUInteger, NoteModel) {
+    NoteModelNew,
+    NoteModelModify
+};
 @interface RHNewNoteViewController : BaseViewController
 @property (strong, nonatomic)  NoteIndexEntity *noteIndexEntity;
+@property (strong, nonatomic) NoteEntity *noteEntity;
+
 @end

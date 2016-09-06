@@ -18,7 +18,7 @@
 
 @property (assign, nonatomic) BOOL modifyed;
 
-
+@property (strong, nonatomic) UIButton *finishButton;
 @end
 
 @implementation RHNewNoteViewController
@@ -42,36 +42,71 @@
     _textView.font = [UIFont systemFontOfSize:15.0f];
     
     [self configRithItem];
+    if (self.noteEntity != nil) {
+        _textView.text = self.noteEntity.content;
+    }
 }
 - (void)configRithItem {
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(modifyDone)];
+    
+    self.finishButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    [self.finishButton setTitle:@"完成" forState:UIControlStateNormal];
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(modifyDone)];
+    [self.finishButton addTarget:self action:@selector(modifyDone) forControlEvents:UIControlEventTouchUpInside];
+    [self.finishButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    self.finishButton.userInteractionEnabled = NO;
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:self.finishButton];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)modifyDone {
     
-    NoteEntity *noteEntity = [[NoteEntity alloc]init];
-    noteEntity.noteIdx = self.noteIndexEntity.noteIdxId;
-    noteEntity.content = _textView.text;
-    noteEntity.star = NO;
-    noteEntity.creatAt = @"a11";
-    noteEntity.lastModifyDate = @"a12";
-    [NotesDBManager insertOnDuplicateUpdate:noteEntity];
     
-    NSNumber *noteCount = self.noteIndexEntity.notesCount;
-    noteCount = [NSNumber numberWithInteger:noteCount.integerValue + 1];
-    self.noteIndexEntity.notesCount = noteCount;
-    [NotesIndexDBManager insertOnDuplicateUpdate:self.noteIndexEntity];
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    if (self.noteIndexEntity != nil) {
+        
+        NoteEntity *noteEntity = [[NoteEntity alloc]init];
+        noteEntity.noteIdx = self.noteIndexEntity.noteIdxId;
+        noteEntity.content = _textView.text;
+        noteEntity.star = NO;
+        noteEntity.creatAt = @"a11";
+        noteEntity.lastModifyDate = @"a12";
+        [NotesDBManager insertOnDuplicateUpdate:noteEntity];
+        
+        NSNumber *noteCount = self.noteIndexEntity.notesCount;
+        noteCount = [NSNumber numberWithInteger:noteCount.integerValue + 1];
+        self.noteIndexEntity.notesCount = noteCount;
+        [NotesIndexDBManager insertOnDuplicateUpdate:self.noteIndexEntity];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }else {
+        
+         [NotesDBManager insertOnDuplicateUpdate:self.noteEntity];
+        
+        [self.finishButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        self.finishButton.userInteractionEnabled = NO;
+
+    }
     
 }
+
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
     
     if (textView.text.length > 0) {
         
     }
+    
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    
+    [self.finishButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    self.finishButton.userInteractionEnabled = YES;
+    if (self.noteEntity != nil) {
+        self.noteEntity.content = textView.text;
+    }
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

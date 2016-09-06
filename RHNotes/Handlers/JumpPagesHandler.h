@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-@class NoteIndexEntity;
+#import "RHNewNoteViewController.h"
 
+@class NoteIndexEntity;
+@class NoteEntity;
 @interface JumpPagesHandler : NSObject
 
++ (void)jump2NotesListWithMode:(NoteIndexEntity *) entity;
 
-+ (void)jump2NotesListWithMode:(NoteIndexEntity *)entity;
+//+ (void)jump2NewNoteController:(NoteIndexEntity *) noteIdxEntity;
+//+ (void)jump2NewNoteController:(NoteEntity *) noteEntity;
++ (void)jump2NewNoteController:(id)noteEntity noteModel:(NoteModel)model;
+
+
 @end

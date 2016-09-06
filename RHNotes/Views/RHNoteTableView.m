@@ -8,7 +8,7 @@
 
 #import "RHNoteTableView.h"
 #import "NoteEntity.h"
-
+#import "JumpPagesHandler.h"
 
 static NSString *const NOTECELLINTITY = @"NOTECELLINTITY";
 
@@ -55,6 +55,9 @@ static NSString *const NOTECELLINTITY = @"NOTECELLINTITY";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NoteEntity *entity = _notes[indexPath.row];
+    [JumpPagesHandler jump2NewNoteController:entity noteModel:NoteModelModify];
 }
 
 

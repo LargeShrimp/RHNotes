@@ -13,6 +13,7 @@
 #import "NotesDBManager.h"
 #import "NotesIndexDBManager.h"
 #import "RHNewNoteViewController.h"
+#import "JumpPagesHandler.h"
 @interface RHNoteViewController ()
 @property (strong, nonatomic) RHNoteTableView *tableView;
 @property (strong, nonatomic) NSMutableArray *notes;
@@ -55,9 +56,10 @@
 
 #pragma mark - Actions
 - (void)newNote {
-    RHNewNoteViewController *newNoteController = [[RHNewNoteViewController alloc]init];
-    newNoteController.noteIndexEntity = self.noteIndexEntity;
-    [self.navigationController pushViewController:newNoteController animated:YES];
+//    RHNewNoteViewController *newNoteController = [[RHNewNoteViewController alloc]init];
+//    newNoteController.noteIndexEntity = self.noteIndexEntity;
+//    [self.navigationController pushViewController:newNoteController animated:YES];    
+    [JumpPagesHandler jump2NewNoteController:self.noteIndexEntity noteModel:NoteModelNew];
 }
 
 - (void)fetchNotesData {
