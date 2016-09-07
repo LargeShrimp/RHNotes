@@ -23,7 +23,31 @@
              };
 
 }
++ (NSValueTransformer *)starTransformer {
+    return [NSValueTransformer  valueTransformerForName:MTLBooleanValueTransformerName];
+}
 
++ (NSValueTransformer *)creatAtJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *dateString) {
+        return [self.dateFormatter dateFromString:dateString];
+    } reverseBlock:^id(NSDate *date) {
+        return [self.dateFormatter stringFromDate:date];
+    }];
+}
++ (NSValueTransformer *)lastModifyDateJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *dateString) {
+        return [self.dateFormatter dateFromString:dateString];
+    } reverseBlock:^id(NSDate *date) {
+        return [self.dateFormatter stringFromDate:date];
+    }];
+}
+
++ (NSDateFormatter *)dateFormatter {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    dateFormatter.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US_POSIX"];
+    dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
+    return dateFormatter;
+}
 //--MTLFMDBSerializing Delegate
 + (NSDictionary *)FMDBColumnsByPropertyKey {
     

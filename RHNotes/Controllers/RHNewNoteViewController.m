@@ -69,8 +69,8 @@
         noteEntity.noteIdx = self.noteIndexEntity.noteIdxId;
         noteEntity.content = _textView.text;
         noteEntity.star = NO;
-        noteEntity.creatAt = @"a11";
-        noteEntity.lastModifyDate = @"a12";
+        noteEntity.creatAt = [NSDate date];
+        noteEntity.lastModifyDate = [NSDate date];
         [NotesDBManager insertOnDuplicateUpdate:noteEntity];
         
         NSNumber *noteCount = self.noteIndexEntity.notesCount;
@@ -81,6 +81,7 @@
         
     }else {
         
+        self.noteEntity.lastModifyDate = [NSDate date];
          [NotesDBManager insertOnDuplicateUpdate:self.noteEntity];
         
         [self.finishButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];

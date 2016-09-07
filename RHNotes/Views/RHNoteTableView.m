@@ -46,6 +46,7 @@ static NSString *const NOTECELLINTITY = @"NOTECELLINTITY";
     NoteEntity *entity = _notes[indexPath.row];
     
     cell.textLabel.text = entity.content;
+    cell.detailTextLabel.text = entity.lastModifyDate;
 //    cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
 //    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",entity.notesCount];
 //    cell.detailTextLabel.textColor = [UIColor redColor];

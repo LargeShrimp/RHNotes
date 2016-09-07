@@ -14,10 +14,10 @@
 @property (strong, nonatomic) NSString *content;
 
 //创建时间
-@property (strong, nonatomic) NSString *creatAt;
+@property (strong, nonatomic) NSDate *creatAt;
 
 //最后修改时间
-@property (strong, nonatomic) NSString *lastModifyDate;
+@property (strong, nonatomic) NSDate *lastModifyDate;
 
 //加星
 @property (assign, nonatomic, getter=isStar) BOOL star;
