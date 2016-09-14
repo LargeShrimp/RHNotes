@@ -66,7 +66,15 @@
     
 //    self.notes = [[NotesDBManager queryAllDataWithClass:[NoteEntity class]] mutableCopy];
     
-  self.notes =   [[NotesDBManager findByColumn:@"index_id" columnValue:[NSString stringWithFormat:@"%@",self.noteIndexEntity.noteIdxId] withClass:[NoteEntity class]] mutableCopy];
+//  self.notes =   [[NotesDBManager findByColumn:@"index_id" columnValue:[NSString stringWithFormat:@"%@",self.noteIndexEntity.noteIdxId] withClass:[NoteEntity class]] mutableCopy];
+    
+    NSDictionary *dic = @{
+                          @"content":@"content",
+                          @"creatAt":@"2013/07/02 16:40:00 +0000",
+                          @"star":@0,
+                          };
+    
+    NoteEntity *entity =      [NoteEntity modelWithDictionary:dic error:nil];
     [self.tableView setNotes:[self.notes copy]];
 }
 - (void)didReceiveMemoryWarning {

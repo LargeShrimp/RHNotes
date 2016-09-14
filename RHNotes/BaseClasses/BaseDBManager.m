@@ -190,7 +190,7 @@
 + (NSArray *)findByColumn:(NSString *)column columnValue:(NSString *)value withClass:(Class)objectClass {
     if (!column || !value) return nil;
     NSError *error = nil;
-    NSString * query = [NSString stringWithFormat:@"select * from %@ where %@='%@'", [objectClass FMDBTableName], column, value];
+    NSString * query = [NSString stringWithFormat:@"select id ,content ,index_id,star ,datetime(creatAt, 'unixepoch', 'localtime',) as creatAt , datetime(lastmodifyat, 'unixepoch', 'localtime') as lastmodifyat from %@ where %@='%@'", [objectClass FMDBTableName], column, value];
     FMResultSet *resultSet = [[BaseDBManager shareInstance].db executeQuery:query];
     NSMutableArray *result = [NSMutableArray array];
     //把 resultSet 转换成model

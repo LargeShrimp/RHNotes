@@ -26,7 +26,7 @@
     
     [self.window makeKeyAndVisible];
     
-    [self customApearence];
+//    [self customApearence];
     return YES;
 }
 
