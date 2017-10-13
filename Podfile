@@ -6,13 +6,13 @@ target 'RHNotes' do
   # use_frameworks!
 
   # Pods for RHNotes
-pod 'Mantle', '1.5.5'
-pod 'FMDB', '~> 2.3'
-pod 'MTLFMDBAdapter', :git => 'https://github.com/summerblue/MTLFMDBAdapter'
-pod 'FMDBMigrationManager', '~> 1.3'
-pod 'DateTools'
-pod 'DZNEmptyDataSet'
-pod 'Masonry'
+  #pod 'Mantle', '1.5.5'
+  #pod 'FMDB', '~> 2.3'
+  #pod 'MTLFMDBAdapter', :git => 'https://github.com/summerblue/MTLFMDBAdapter'
+  #pod 'FMDBMigrationManager', '~> 1.3'
+  #pod 'DateTools'
+  #pod 'DZNEmptyDataSet'
+  #pod 'Masonry'
   target 'RHNotesTests' do
     inherit! :search_paths
     # Pods for testing
