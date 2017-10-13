@@ -63,33 +63,15 @@
 }
 
 - (void)fetchNotesData {
-    
-//    self.notes = [[NotesDBManager queryAllDataWithClass:[NoteEntity class]] mutableCopy];
-    
-//  self.notes =   [[NotesDBManager findByColumn:@"index_id" columnValue:[NSString stringWithFormat:@"%@",self.noteIndexEntity.noteIdxId] withClass:[NoteEntity class]] mutableCopy];
-    
-    NSDictionary *dic = @{
-                          @"content":@"content",
-                          @"creatAt":@"2013/07/02 16:40:00 +0000",
-                          @"star":@0,
-                          };
-    
-    NoteEntity *entity =      [NoteEntity modelWithDictionary:dic error:nil];
+
+    self.notes = [[NotesDBManager queryAllDataWithClass:[NoteEntity class]] mutableCopy];
+//    self.notes =   [[NotesDBManager findByColumn:@"index_id" columnValue:[NSString stringWithFormat:@"%@",self.noteIndexEntity.noteIdxId] withClass:[NoteEntity class]] mutableCopy];
     [self.tableView setNotes:[self.notes copy]];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
